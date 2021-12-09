@@ -28,6 +28,34 @@ public class cu2633 {
 	}
 
 	public static void main(String[] args) {
+		// 정답 ver
+		Scanner sc = new Scanner(System.in);
+		
+		int[] numArr = new int[sc.nextInt()]; 
+		int search = sc.nextInt();
+
+		//  랜덤값 저장
+		for (int i = 0; i < numArr.length; i++) {
+			numArr[i] = sc.nextInt();
+		}
+
+		
+		if (numArr[numArr.length - 1] < search) { // 배열 내부의 최대값을 초과한다면 num+1 출력
+			System.out.println((numArr.length + 1));
+		} 
+		else { // 초과하지 않다면
+			// 입력한search 숫자찾기!
+		// 입력한search 숫자찾기!
+			for (int i = 0; i < numArr.length; i++) {
+				if (search <= numArr[i]) { // 찾는 값이 있다면 출력 후 종료
+					System.out.println((i + 1));
+					break;
+				}
+			}
+		}
+
+		// 세부 코드 ver (버블정렬 / 정렬배열 출력)
+		/* 
 		Random rand = new Random();
 		
 		System.out.print("배열의 길이 입력해주세요 : ");
@@ -38,7 +66,7 @@ public class cu2633 {
 
 		//  랜덤값 저장
 		for (int i = 0; i < numArr.length; i++) {
-			numArr[i] = rand.nextInt(50) + 1; // 1~50까지 랜덤
+			numArr[i] = numCheck(1, 50); // 집합개수만큼 저장할 배열
 		}
 
 		// 오름차순 정렬(버블정렬)
@@ -51,7 +79,7 @@ public class cu2633 {
 				}
 			}
 		}
-		
+
 		// 정렬된 배열 숫자출력
 		System.out.print("[ ");
 		for (int v: numArr) {
@@ -65,16 +93,14 @@ public class cu2633 {
 		else { // 초과하지 않다면
 			// 입력한search 숫자찾기!
 			for (int i = 0; i < numArr.length; i++) {
-				if (numArr[i] == search) { // 찾는 값이 있다면 출력 후 종료
+				if (search <= numArr[i]) { // 찾는 값이 있다면 출력 후 종료
 					System.out.println((i + 1));
 					break;
-				} else if (i == numArr.length - 1) { // 마지막 번호에도 못찾았다면 
-					System.out.println((i + 1));
 				}
 			}
 		}
 
-
+*/
 	}
 
 }
