@@ -28,7 +28,7 @@ public class cu2633 {
 	}
 
 	public static void main(String[] args) {
-		// 정답 ver
+		// [정답 ver]
 		Scanner sc = new Scanner(System.in);
 		
 		int[] numArr = new int[sc.nextInt()]; 
@@ -54,7 +54,7 @@ public class cu2633 {
 			}
 		}
 
-		// 세부 코드 ver (버블정렬 / 정렬배열 출력)
+		// [세부 코드 ver (버블정렬 / 정렬배열 출력)]
 		/* 
 		Random rand = new Random();
 		
