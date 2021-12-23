@@ -38,11 +38,8 @@ public class pg12977 {
 				for(int c = b+1; c < nums.length; c++) {
 					int box = nums[a] + nums[b] + nums[c];
 					boolean flag = true;
-					for(int d = 2; d <= 9; d++) {
-						if(box == d) {
-							continue;
-						}
-						else if(box%d == 0) {
+					for(int d = 2; d < box; d++) {
+						if(box%d == 0) {
 							flag = false;
 							break;
 						}
@@ -53,7 +50,7 @@ public class pg12977 {
 				}
 			}
 		}
-		System.out.println(answer);
+
 		return answer;
 		
 	}
